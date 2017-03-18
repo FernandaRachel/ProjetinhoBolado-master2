@@ -7,15 +7,23 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class DetallheClienteActivity extends Activity {
-    TextView textViewnome;
+    TextView textViewNome, textViewEmail, textViewFone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detallhe_cliente);
-        textViewnome = (TextView) findViewById(R.id.txt_cliente_nome);
+        textViewNome = (TextView) findViewById(R.id.txt_cliente_nome);
+        textViewFone = (TextView) findViewById(R.id.txt_cliente_fone);
+        textViewEmail = (TextView) findViewById(R.id.txt_cliente_email);
+
         Intent intent = getIntent();
-        String nome = intent.getStringExtra(ListarClientesActivity.NOME);
-        textViewnome.setText(nome);
+        Cliente cliente = (Cliente) intent.getSerializableExtra(ListarClientesActivity.CLIENTE);
+
+        textViewNome.setText(cliente.getNome());
+        textViewFone.setText(cliente.getFone());
+        textViewFone.setText(cliente.getEmail());
+
+
     }
 }
