@@ -33,7 +33,7 @@ public class Data {
             lista[18] = new Cliente(19, "Mário Quintana", "51 999932778", "mq@usjt.br");
             lista[19] = new Cliente(20, "Gregório de Matos", "12 32138888", "gm@usjt.br");
             lista[20] = new Cliente(21, "Augusto dos Anjos", "11 994524141", "aanj@usjt.br");
-            //Arrays.sort(lista);
+            Arrays.sort(lista);
             _lista = lista;
         }
         return _lista;

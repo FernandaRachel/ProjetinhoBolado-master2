@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by arqdsis on 03/03/2017.
  */
-public class Cliente implements Serializable {
+public class Cliente implements Serializable, Comparable<Cliente> {
     private Integer id;
     private String nome;
     private String fone;
@@ -50,6 +50,11 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
+    public String getImagem() {
+        String foto = this.email.replace('@', '_');
+        return foto.replace('.', '_');
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
@@ -81,5 +86,10 @@ public class Cliente implements Serializable {
         result = 31 * result + fone.hashCode();
         result = 31 * result + email.hashCode();
         return result;
+    }
+
+    @Override
+    public int compareTo(Cliente cliente) {
+        return this.nome.compareTo(cliente.getNome());
     }
 }
