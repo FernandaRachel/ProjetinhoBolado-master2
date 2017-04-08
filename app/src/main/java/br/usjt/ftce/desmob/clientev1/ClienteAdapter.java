@@ -54,7 +54,7 @@ public class ClienteAdapter extends BaseAdapter {
         //usar os widgets cacheados na tag da view reciclado
         ViewHolder holder = (ViewHolder) view.getTag();
         //carrega os novos valores
-        Drawable foto = Imagem.getDrawable(context, clientes[i].getImagem());
+        Drawable foto = Imagem.getDrawable(context);
         holder.getFotoCliente().setImageDrawable(foto);
         holder.getNomeCliente().setText(clientes[i].getNome());
         holder.getDetalheCliente().setText(clientes[i].getFone() + "  -  " + clientes[i].getEmail());

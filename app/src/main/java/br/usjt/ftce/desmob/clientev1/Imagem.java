@@ -25,4 +25,10 @@ public class Imagem {
         }
         return null;
     }
+
+    //Arrumar imagem
+    public static Drawable getDrawable(Activity context) {
+        String drawableName = "padrao";
+        return getDrawable(context, drawableName);
+    }
 }
