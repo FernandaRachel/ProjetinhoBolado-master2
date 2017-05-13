@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     String chave;
     public static final String LISTA = "br.usjt.ftce.desmob.clientev1.lista";
     public static final String CHAVE = "br.usjt.ftce.desmob.clientev1.busca";
-    public static final String SERVIDOR = "http://10.71.4.28:8080";
+    public static final String SERVIDOR = "http://10.71.4.25:8080";
     public static final String APPSTRING = "/arqdesis_poetas";
     public static final String RECURSO = "/cliente";
 
