@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class ClientesDb {
     ClientesDbHelper dbHelper;
+
+
     public static final String CLIENTE = "cliente";
 
     public ClientesDb(Context context){
@@ -20,6 +22,7 @@ public class ClientesDb {
 
     public void insereCliente(ArrayList<Cliente> clientes){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete(ClientesContract.ClienteEntry.TABLE_NAME,null, null);
 
         for(Cliente cliente: clientes) {
             ContentValues values = new ContentValues();

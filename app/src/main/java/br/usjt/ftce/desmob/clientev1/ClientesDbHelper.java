@@ -17,8 +17,8 @@ public class ClientesDbHelper extends SQLiteOpenHelper {
     public static final String SQL_CREATE_CLIENTE =
             "CREATE TABLE " + ClientesContract.ClienteEntry.TABLE_NAME + OPEN_PAR +
                     ClientesContract.ClienteEntry._ID + " INTEGER PRIMARY KEY" + COMMA_SEP +
-                    ClientesContract.ClienteEntry.COLUMN_NAME_CLIENTE_NOME + TEXT_TYPE + CLOSE_PAR +
-                    ClientesContract.ClienteEntry.COLUMN_NAME_CLIENTE_FONE + TEXT_TYPE + CLOSE_PAR +
+                    ClientesContract.ClienteEntry.COLUMN_NAME_CLIENTE_NOME + TEXT_TYPE + COMMA_SEP +
+                    ClientesContract.ClienteEntry.COLUMN_NAME_CLIENTE_FONE + TEXT_TYPE + COMMA_SEP +
                     ClientesContract.ClienteEntry.COLUMN_NAME_CLIENTE_EMAIL + TEXT_TYPE + CLOSE_PAR;
 
 
